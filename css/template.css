@@ -75,7 +75,9 @@ h4 {
 }
 
 .inicio {
-    background-image: url(../images/header.jpg); }
+    background-image: url(../images/header.jpg); 
+    background-size: cover;
+  }
   
 .header {
     background-color: #333333;

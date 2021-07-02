@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contacto.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="padre">
 <main class="contenedor">
         <h3 class="centrar-texto">Contacto</h3>
         <div class="contacto-background"></div>
@@ -26,9 +37,13 @@
             </div><!--.campo-->
 
             <div class="campo">
-                <input type="submit" 
+                <button type="button" >Enviar</button>
+                <!--<input type="submit" 
                 value="Enviar" 
-                class="boton boton--primario">
-            </div><!--campo-->
-                
+                class="boton boton--primario">-->
+            </div><!--campo-->       
         </form>
+</div>
+
+</body>
+</html>
