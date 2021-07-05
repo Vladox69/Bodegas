@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/contacto.css">
     <title>Document</title>
 </head>
 <body>
-<div class="padre">
+
 <main class="contenedor">
+<div class="padres">
         <h3 class="centrar-texto">Contacto</h3>
         <div class="contacto-background"></div>
         <form class="formulario">
@@ -37,10 +37,9 @@
             </div><!--.campo-->
 
             <div class="campo">
-                <button type="button" >Enviar</button>
-                <!--<input type="submit" 
+                <input type="submit" 
                 value="Enviar" 
-                class="boton boton--primario">-->
+                class="boton boton--primario">
             </div><!--campo-->       
         </form>
 </div>

@@ -7,8 +7,11 @@
     <link rel="stylesheet" type="text/css" href="jquery-easyui-1.9.15/themes/icon.css">
     <script type="text/javascript" src="jquery-easyui-1.9.15/jquery.min.js"></script>
     <script type="text/javascript" src="jquery-easyui-1.9.15/jquery.easyui.min.js"></script>
+    <!--cambia la posicion de los componnetes -->
+    <link rel="stylesheet" type="text/css" href="css/centrarComponentes.css">
 </head>
 <body>
+    <div class="padre">
     <h2>LOGIN</h2>
     <p>Escriba su usuario y contraseña</p>
     <div class="login">
@@ -25,7 +28,7 @@
             </div>
         </form>
     </div>
-    
+    </div>
 </body>
 </html>
 

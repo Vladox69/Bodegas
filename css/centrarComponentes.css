@@ -1,0 +1,30 @@
+/* centrar */
+.padre{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  p, h2{
+      color:white;
+      font-weight: bold;
+  }
+
+.padre{
+      border: 2px solid black;
+      border-radius: 5px;
+      padding: 20px;
+  }
+
+.easyui-panel{
+    background-color:transparent;
+    border:none;
+}
+
+.padres{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+

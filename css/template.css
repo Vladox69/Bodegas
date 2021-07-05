@@ -34,6 +34,13 @@ p {
     font-size: 2rem;
 }
 
+.padres{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
 .contenedor {
     width: 95%;
     max-width: 120rem;
@@ -104,6 +111,7 @@ h4 {
       max-width: 60rem; }
   
   .footer {
+    position: fixed;
     padding: 2.5rem;
     background-color: #333333; }
     .footer .contenedor-footer {
