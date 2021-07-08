@@ -14,12 +14,15 @@
 $servidor = "localhost";
 $username = "root";
 $contraseña = "";
-$bd = "productos_uta";
+$bd = "bodegas";
 $connect = mysqli_connect($servidor,$username,$contraseña,$bd);
 
-$dql = "SELECT ID_PRO FROM productos";
+$dql = "SELECT id FROM producto";
 //$list = array();
 $resultado = mysqli_query($connect,$dql);
+
+$sqlSelectBodegas = "SELECT id FROM bodega";
+$resultado1=mysqli_query($connect, $sqlSelectBodegas);
 
 ?>
 <!DOCTYPE html>
@@ -33,17 +36,26 @@ $resultado = mysqli_query($connect,$dql);
 <body>
     <form action="">
         
-    <select name="productos" >
+    Productos: <select name="productos">
         <?php while( $row = mysqli_fetch_row($resultado)){ ?>
             <option value="<?php echo $row[0] ?>"> <?php echo $row[0] ?> </option>
         <?php } ?>
     </select>
+
+    <p>
+    Bodegas: <select name="bodega" >
+        <?php while( $row = mysqli_fetch_row($resultado1)){ ?>
+            <option value="<?php echo $row[0] ?>"> <?php echo $row[0] ?> </option>
+        <?php } ?>
+    </select>
+    </p>
+
         <p>
             <input type="submit" name="buscar" value="Buscar" width="60px">
         </p>
 
         <p>
-            <input type="text" name='cantidad'>
+            Cantidad: <input type="text" name='cantidad' style="width: 60px;">
         </p>
 
         
@@ -59,12 +71,12 @@ $resultado = mysqli_query($connect,$dql);
 $servidor = "localhost";
 $username = "root";
 $contraseña = "";
-$bd = "productos_uta";
+$bd = "bodegas";
 $connect = mysqli_connect($servidor,$username,$contraseña,$bd);
 
 if( isset($_GET['buscar']) ){
     $id = $_GET['productos'];
-    $dql = " SELECT NOM_PRO FROM productos WHERE ID_PRO='$id' ";
+    $dql = " SELECT nombre FROM producto WHERE id='$id' ";
     //$list = array();
     $resultado = mysqli_query($connect,$dql);
     if( $fila = mysqli_fetch_row($resultado) ){
@@ -74,7 +86,7 @@ if( isset($_GET['buscar']) ){
 }else if( isset($_GET['actualizar']) ){
     
     $id = $_GET['productos'];
-    $consulta = "SELECT * FROM mastroproductos WHERE ID_PRO_P = '$id'";
+    $consulta = "SELECT * FROM detalle_bodega WHERE idprod = '$id'";
     $result = mysqli_query($connect, $consulta);
     if( $row = mysqli_fetch_row($result)){
         $valor = $row[1];
@@ -82,7 +94,7 @@ if( isset($_GET['buscar']) ){
 
     $cantidad= $_GET['cantidad'];
     $newValor = $cantidad + $valor;
-    $update = " UPDATE mastroproductos SET CANT_PRO='$newValor' WHERE ID_PRO_P='$id' ";
+    $update = " UPDATE detalle_bodega SET cantidad='$newValor' WHERE idprod='$id'";
     $result = mysqli_query($connect, $update);
     if( $result == true ){
         echo json_encode("actualizado");
