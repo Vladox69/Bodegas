@@ -6,18 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <style>
-    iframe{   
-	    position: absolute;
-        top:50%;
-	    left: 50%;
-        transform: translate(-50%,-50%);
-        width:25%;
-        height:50%;
-    }
-    </style>
 </head>
 <body>
-    <iframe src="models/gestorProductos.php" frameborder="1"></iframe>
+    <div class="contenedor">
+    <iframe src="models/gestorProductos.php" frameborder="1" class=" iframe-contenedor"></iframe>
+    </div>
 </body>
 </html>
