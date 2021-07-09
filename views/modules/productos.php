@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Basic Form - jQuery EasyUI Demo</title>
@@ -9,45 +10,47 @@
     <script type="text/javascript" src="jquery-easyui-1.9.15/jquery.min.js"></script>
     <script type="text/javascript" src="jquery-easyui-1.9.15/jquery.easyui.min.js"></script>
 </head>
+
 <body>
     <h2>PRODUCTOS</h2>
     <div style="margin:20px 0;"></div>
-    <div class="formulario" title="ACTUALIZAR PRODUCTOS" style="width:100%;max-width:400px;padding:30px 60px;">
-        <form id="ff" method="post" action= "http://localhost/bodegas/models/editarProductos.php">
+    <div class="easyui-panel" title="ACTUALIZAR PRODUCTOS" style="width:100%;max-width:400px;padding:30px 60px;">
+        <form id="ff" method="post" action="http://localhost/bodegas/models/editarProductos.php">
 
             <div style="margin-bottom:20px">
-            <select class="easyui-combobox" name="bodegas" style="width:100%" data-options="label: 'Bodegas:', editable:false">
-            <?php 
-            $servidor = "localhost";
-            $username = "root";
-            $contraseña = "";
-            $bd = "bodegas";
-            $connect = mysqli_connect($servidor,$username,$contraseña,$bd);
-            
-            $dql = "SELECT ciudad FROM bodega";
-            //$list = array();
-            $resultado = mysqli_query($connect,$dql);while( $row = mysqli_fetch_row($resultado)){ ?>
-            <option value="<?php echo $row[0] ?>"> <?php echo $row[0] ?> </option>
-             <?php } ?>
-             </select>
+                <select class="easyui-combobox" name="bodegas" style="width:100%" data-options="label: 'Bodegas:', editable:false">
+                    <?php
+                    $servidor = "localhost";
+                    $username = "root";
+                    $contraseña = "";
+                    $bd = "bodegas";
+                    $connect = mysqli_connect($servidor, $username, $contraseña, $bd);
+
+                    $dql = "SELECT ciudad FROM bodega";
+                    //$list = array();
+                    $resultado = mysqli_query($connect, $dql);
+                    while ($row = mysqli_fetch_row($resultado)) { ?>
+                        <option value="<?php echo $row[0] ?>"> <?php echo $row[0] ?> </option>
+                    <?php } ?>
+                </select>
             </div>
             <div style="margin-bottom:20px">
-            <select class="easyui-combobox" name="productos"  style="width:100%" data-options="label: 'Productos:', editable:false">
-            
-            <?php 
-            $servidor = "localhost";
-            $username = "root";
-            $contraseña = "";
-            $bd = "bodegas";
-            $connect = mysqli_connect($servidor,$username,$contraseña,$bd);
-            
-            $dql = "SELECT nombre FROM producto";
-            //$list = array();
-            $resultado = mysqli_query($connect,$dql);
-            while( $row = mysqli_fetch_row($resultado)){ ?>
-            <option value="<?php echo $row[0] ?>"> <?php echo $row[0] ?> </option>
-             <?php } ?>
-                    </select>
+                <select class="easyui-combobox" name="productos" style="width:100%" data-options="label: 'Productos:', editable:false">
+
+                    <?php
+                    $servidor = "localhost";
+                    $username = "root";
+                    $contraseña = "";
+                    $bd = "bodegas";
+                    $connect = mysqli_connect($servidor, $username, $contraseña, $bd);
+
+                    $dql = "SELECT nombre FROM producto";
+                    //$list = array();
+                    $resultado = mysqli_query($connect, $dql);
+                    while ($row = mysqli_fetch_row($resultado)) { ?>
+                        <option value="<?php echo $row[0] ?>"> <?php echo $row[0] ?> </option>
+                    <?php } ?>
+                </select>
             </div>
 
             <div style="margin-bottom:20px">
@@ -61,10 +64,11 @@
         </div>
     </div>
     <script>
-        function submitForm(){
+        function submitForm() {
             $('#ff').form('submit');
         }
-        function clearForm(){
+
+        function clearForm() {
             $('#ff').form('clear');
         }
     </script>

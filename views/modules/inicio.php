@@ -13,7 +13,6 @@
 </head>
 
 <body>
-   <main>
         <h2>LOGIN</h2>
         <p class="centrar-texto">Escriba su usuario y contraseña</p>
             <form action="http://localhost/bodegas/models/consumoServicioLogin.php" method="request" class="formulario">
@@ -28,7 +27,6 @@
                     <button type="submit" name="login" value="login">Log In</button>
                 </div>
             </form>
-   </main>
 </body>
 
 </html>

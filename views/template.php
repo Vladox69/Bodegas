@@ -19,7 +19,7 @@
             include "modules/navigation.php";
         ?>
 
-    <main>
+    <main class="contenedor" >
         <?php
             $mvc = new MvcController();
             $mvc -> enlacesPaginasController();

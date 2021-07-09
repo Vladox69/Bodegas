@@ -8,7 +8,6 @@
 </head>
 <body>
 
-<main class="contenedor">
         <h3 class="centrar-texto">Contacto</h3>
         <div class="contacto-background"></div>
         <form class="formulario">
