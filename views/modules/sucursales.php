@@ -17,12 +17,7 @@
     <h2>SUCURSALES</h2>
     <div style="margin:20px 0;"></div>
     <div class="easyui-panel" title="Ingresar nuevo pedido" style="width:100%;max-width:400px;padding:30px 60px;">
-<<<<<<< HEAD
         <form id="ff" method="post" action= "http://localhost/bodegas/models/insertarDetalle.php" >
-=======
-        <form id="ff" method="post" action="http://localhost/bodegas/models/insertarDetalle.php">
->>>>>>> 81b440e0d46e8fae5e3ad12154a0e31717e123ff
-
             <div style="margin-bottom:20px">
                 <select class="easyui-combobox" name="bodegas" style="width:100%" data-options="label: 'Bodegas:', editable:false">
                     <?php
