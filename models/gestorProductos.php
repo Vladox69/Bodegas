@@ -97,8 +97,8 @@ if( isset($_GET['buscar']) ){
     $update = " UPDATE detalle_bodega SET cantidad='$newValor' WHERE idprod='$id'";
     $result = mysqli_query($connect, $update);
     if( $result == true ){
-        echo json_encode("actualizado");
+        //echo json_encode("actualizado");
     }else{
-        echo json_encode("no se pudo actualizar");
+        //echo json_encode("no se pudo actualizar");
     }
 }
