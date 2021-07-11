@@ -1,5 +1,10 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
+=======
+<html>
+
+>>>>>>> 81b440e0d46e8fae5e3ad12154a0e31717e123ff
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +13,9 @@
     <link rel="stylesheet" href="css/inicio.css">
     <title>Document</title>
 </head>
+
 <body>
+<<<<<<< HEAD
     <main>
     <div class="padre">
     <h2>LOGIN</h2>
@@ -48,4 +55,22 @@
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src="js/controles.js"></script>
 </body>
+=======
+        <h2>LOGIN</h2>
+        <p class="centrar-texto">Escriba su usuario y contraseña</p>
+            <form action="http://localhost/bodegas/models/consumoServicioLogin.php" method="request" class="formulario">
+                <div style="margin:20px 0;"></div>
+                <div class="formulario" style="width:400px;padding:50px 60px">
+                    <div style="margin-bottom:20px">
+                        <input name="nombre" class="easyui-textbox" prompt="Username" iconWidth="28" style="width:100%;height:34px;padding:10px;">
+                    </div>
+                    <div style="margin-bottom:20px">
+                        <input name="contra" class="easyui-passwordbox" prompt="Password" iconWidth="28" style="width:100%;height:34px;padding:10px">
+                    </div>
+                    <button type="submit" name="login" value="login">Log In</button>
+                </div>
+            </form>
+</body>
+
+>>>>>>> 81b440e0d46e8fae5e3ad12154a0e31717e123ff
 </html>

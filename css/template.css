@@ -169,5 +169,15 @@ h4 {
   height: 20rem;
 }
 
+.centrar-texto{
+  text-align: center;
+}
+
+.iframe-contenedor{
+  margin: 5rem auto 5rem auto;
+  width: 95%;
+  padding: 5rem;
+}
+
 
 

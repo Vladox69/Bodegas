@@ -18,16 +18,14 @@
             include "modules/navigation.php";
         ?>
 
-    <main>
+    <main class="contenedor" >
         <?php
             $mvc = new MvcController();
             $mvc -> enlacesPaginasController();
         ?>
     </main>
 
-    <footer>
         <?php include "modules/footer.php" ?>
-    </footer>
         
     
 </body>

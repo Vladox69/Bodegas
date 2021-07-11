@@ -8,7 +8,10 @@
 </head>
 <body>
 
+<<<<<<< HEAD
 <main class="contenedor">
+=======
+>>>>>>> 81b440e0d46e8fae5e3ad12154a0e31717e123ff
         <h3 class="centrar-texto">Contacto</h3>
         <div class="contacto-background"></div>
         <form class="formulario">
@@ -41,5 +44,9 @@
                 class="boton boton--primario">
             </div><!--campo-->       
         </form>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 81b440e0d46e8fae5e3ad12154a0e31717e123ff
 </body>
 </html>
