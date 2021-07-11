@@ -9,7 +9,6 @@
 <body>
 
 <main class="contenedor">
-<div class="padres">
         <h3 class="centrar-texto">Contacto</h3>
         <div class="contacto-background"></div>
         <form class="formulario">
@@ -42,7 +41,5 @@
                 class="boton boton--primario">
             </div><!--campo-->       
         </form>
-</div>
-
 </body>
 </html>

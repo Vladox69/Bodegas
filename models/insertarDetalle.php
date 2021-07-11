@@ -36,7 +36,8 @@ header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
 
     if($mysqli->query($sqlInsert)=== TRUE )
     {
-        echo json_encode("Se inserto correctamente");
+        header("Location:http://localhost/Bodegas/index.php?action=sucursales");
+        //echo json_encode("Se inserto correctamente");
     }else
     {
         echo json_encode("Error".$sqlInsert.$mysqli->error);

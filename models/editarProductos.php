@@ -29,7 +29,8 @@ header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
 
     if($mysqli->query($sqlUpdate)=== TRUE )
     {
-        echo json_encode("Se modifico correctamente");
+        header("Location:http://localhost/Bodegas/index.php?action=productos");
+        //echo json_encode("Se modifico correctamente");
     }else
     {
         echo json_encode("Error".$sqlUpdate.$mysqli->error);

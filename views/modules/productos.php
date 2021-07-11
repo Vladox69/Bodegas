@@ -8,8 +8,10 @@
     <link rel="stylesheet" type="text/css" href="jquery-easyui-1.9.15/demo.css">
     <script type="text/javascript" src="jquery-easyui-1.9.15/jquery.min.js"></script>
     <script type="text/javascript" src="jquery-easyui-1.9.15/jquery.easyui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/sucursal.css">
 </head>
 <body>
+    <main class="padre">
     <h2>PRODUCTOS</h2>
     <div style="margin:20px 0;"></div>
     <div class="easyui-panel" title="ACTUALIZAR PRODUCTOS" style="width:100%;max-width:400px;padding:30px 60px;">
@@ -51,15 +53,22 @@
             </div>
 
             <div style="margin-bottom:20px">
-                <input class="easyui-textbox" name="cantidad" style="width:100%" data-options="label:'Cantidad:',required:true">
+                <!--<input class="easyui-textbox" name="cantidad" style="width:100%" data-options="label:'Cantidad:',required:true">-->
+                <label for="cantidad">Cantidad:</label><input type="text" id="cant" class="cantidad" name="cantidad">
+                <p id="error" class="formulario__input-error" >Ingrese solo numeros</p>
+            </div>
 
+            <div class="botones">
+                <input type="submit"  id="enviar" value="Enviar" name="enviar" >
             </div>
         </form>
-        <div style="text-align:center;padding:5px 0">
+        <!--<div style="text-align:center;padding:5px 0">
             <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()" style="width:80px">Guardar</a>
             <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()" style="width:80px">Cancelar</a>
-        </div>
+        </div>-->
     </div>
+    </main>
+    <script src="js/sucursal.js" ></script>
     <script>
         function submitForm(){
             $('#ff').form('submit');
