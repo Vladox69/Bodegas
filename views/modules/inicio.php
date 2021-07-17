@@ -30,7 +30,7 @@
                     <input type="password" class="formulario__input" name="contra" id="password" >
                     <i class="vista fas fa-eye" id="ojo" ></i>
                 </div>
-                <p class="formulario__input-error" >La contraseña tiene que ser de 4 a 12 dígitos.</p>
+                <p class="formulario__input-error" >La contraseña está incorrecta.</p>
             </div>
 
             <!-- mensaje -->

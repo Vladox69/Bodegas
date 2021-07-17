@@ -1,4 +1,4 @@
-<header class="header inicio">
+<header class="header ">
     <div class="contenedor contenido-header">
         <div class="barra">
             <a href="index.php?action=inicio">

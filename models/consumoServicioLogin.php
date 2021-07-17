@@ -6,8 +6,15 @@ $data = json_decode(file_get_contents('http://localhost/bodegas/models/login.php
 if(!empty($data)){
     $usuarioJSON = $data['0']['nombre'];
     $passwordJSON = $data['0']['contra'];
+    $perfilJSON = $data['0']['idbod'];
+
+    $_SESSION['nom']=$usuarioJSON;
     if ($usuarioJSON == $userForm && $passwordJSON == $passForm){
-        header('location: ../index.php?action=sucursales');
+        session_start();
+        $_SESSION['nom'] = $usuarioJSON;
+        $_SESSION['contra'] = $passwordJSON;
+        $_SESSION['idbod'] = $perfilJSON;
+        header('location: ../index.php?action=productos');
     }
 }else{
     header('location: ../index.php');

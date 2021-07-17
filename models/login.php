@@ -6,7 +6,7 @@ if (isset($_REQUEST['nombre']) && isset($_REQUEST['contra'])){
     $usuario = $_REQUEST['nombre'];
     $password = $_REQUEST['contra'];
 
-    $query = "SELECT * FROM USUARIO WHERE nombre = '$usuario' AND contra = '$password'";
+    $query = "SELECT * FROM usuarios WHERE nombre = '$usuario' AND contra = '$password'";
     $resultado = mysqli_query($conn, $query);
     $arreglo = array();
     while($fila = mysqli_fetch_assoc($resultado)){

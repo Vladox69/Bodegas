@@ -7,7 +7,7 @@
 
     include "conexion.php";
 
-    $sqlSelect="SELECT * FROM producto";
+    $sqlSelect="SELECT * FROM producto WHERE idbod=1";
     $respuesta=$conn->query($sqlSelect);
     $result=array();
 
